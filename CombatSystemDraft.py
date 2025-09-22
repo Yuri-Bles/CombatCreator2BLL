@@ -1,5 +1,4 @@
-
-class CharacterSheetDraft:
+class CombatSystemDraft:
     def __init__(self, stats):
         self.stats = stats
 
@@ -8,3 +7,7 @@ class CharacterSheetDraft:
 
     def addStat(self, name: str, defaultValue: int, minimumValue: int, maximumValue: int):
         self.stats.append([name, defaultValue, minimumValue, maximumValue])
+
+
+
+

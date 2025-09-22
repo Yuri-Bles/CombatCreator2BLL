@@ -1,7 +1,7 @@
-from CharacterSheetDraft import CharacterSheetDraft
+from CombatSystemDraft import CombatSystemDraft
 
 
-newCharacter = CharacterSheetDraft([
+newCharacter = CombatSystemDraft([
         ["Health Points", 17, 0, 20],
         ])
 
