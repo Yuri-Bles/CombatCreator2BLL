@@ -31,6 +31,9 @@
     <Compile Include="runserver.py" />
     <Compile Include="CombatCreator1API\__init__.py" />
     <Compile Include="CombatCreator1API\views.py" />
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CombatCreator1API\" />

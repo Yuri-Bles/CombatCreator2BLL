@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d8e9bc90-ff02-4a41-88d4-1108f036f166</ProjectGuid>
+    <ProjectGuid>2d6e0c44-368f-4a62-8996-ea6f0535c528</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CombatCreator2BLL.py</StartupFile>
+    <StartupFile>CombatCreator3InterfacesDAL.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>CombatCreator2BLL</Name>
-    <RootNamespace>CombatCreator2BLL</RootNamespace>
+    <Name>CombatCreator3InterfacesDAL</Name>
+    <RootNamespace>CombatCreator3InterfacesDAL</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,16 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CombatCreator2BLL.py" />
-    <Compile Include="CombatSystemDraft.py" />
+    <Compile Include="CombatCreator3InterfacesDAL.py" />
+    <Compile Include="IStat.py" />
     <Compile Include="__init__.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CombatCreator3InterfacesDAL\CombatCreator3InterfacesDAL.pyproj">
-      <Name>CombatCreator3InterfacesDAL</Name>
-      <Project>{2d6e0c44-368f-4a62-8996-ea6f0535c528}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

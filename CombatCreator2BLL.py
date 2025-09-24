@@ -1,12 +1,12 @@
 from CombatSystemDraft import CombatSystemDraft
 
 
-newCharacter = CombatSystemDraft([
+newCombatSystem = CombatSystemDraft("Cool combat system", [
         ["Health Points", 17, 0, 20],
         ])
 
-print(newCharacter.stats)
+print(newCombatSystem.stats)
 
-newCharacter.addStat("Mana", 20, 0, None)
+newCombatSystem.addStat("Mana", 20, 0, None)
 
-print(newCharacter.stats)
+print(newCombatSystem.stats)

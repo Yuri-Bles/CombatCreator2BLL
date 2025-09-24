@@ -7,6 +7,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator2BLL", "Combat
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator1API", "CombatCreator1API\CombatCreator1API.pyproj", "{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator3InterfacesDAL", "..\CombatCreator3InterfacesDAL\CombatCreator3InterfacesDAL.pyproj", "{2D6E0C44-368F-4A62-8996-EA6F0535C528}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator5TestDAL", "..\CombatCreator5TestDAL\CombatCreator5TestDAL.pyproj", "{45673900-F5E5-4DC7-88DF-C1EB8099A1CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,10 @@ Global
 		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6E0C44-368F-4A62-8996-EA6F0535C528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6E0C44-368F-4A62-8996-EA6F0535C528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45673900-F5E5-4DC7-88DF-C1EB8099A1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45673900-F5E5-4DC7-88DF-C1EB8099A1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
