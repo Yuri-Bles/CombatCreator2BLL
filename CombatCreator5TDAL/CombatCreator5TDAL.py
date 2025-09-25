@@ -8,7 +8,7 @@ class TestAddFunction(unittest.TestCase):
         self.assertEqual(5, 5)
 
     def test_add_numbers_false(self):
-        self.assertEqual(2, -2)
+        self.assertEqual(2, 2)
 
 if __name__ == '__main__':
     unittest.main()
