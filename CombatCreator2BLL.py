@@ -2,7 +2,7 @@ from CombatSystemDraft import CombatSystemDraft
 
 
 newCombatSystem = CombatSystemDraft("Cool combat system", [
-        ["Health Points", 17, 0, 20],
+        ["Health Points", 18, 0, 20],
         ])
 
 print(newCombatSystem.stats)
