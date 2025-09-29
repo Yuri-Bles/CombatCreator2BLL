@@ -5,6 +5,3 @@ class TestAddFunction(unittest.TestCase):
     
     def test_add_numbers_true(self):
         self.assertEqual(6, 6)
-
-if __name__ == '__main__':
-    unittest.main()
