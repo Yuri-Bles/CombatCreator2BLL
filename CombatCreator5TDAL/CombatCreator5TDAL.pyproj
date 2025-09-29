@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>55196071-16f0-4e34-a247-b16efbf85363</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CombatCreator5TDAL.py</StartupFile>
+    <StartupFile>test_CombatCreator5TDAL.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CombatCreator5TDAL.py" />
+    <Compile Include="test_CombatCreator5TDAL.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
