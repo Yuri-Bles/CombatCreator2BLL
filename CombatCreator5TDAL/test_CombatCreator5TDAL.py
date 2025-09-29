@@ -4,4 +4,4 @@ import unittest
 class TestAddFunction(unittest.TestCase):
     
     def test_add_numbers_true(self):
-        self.assertEqual(6, 6)
+        self.assertEqual(5, 5)
