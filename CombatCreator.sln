@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator2BLL", "CombatCreator2BLL.pyproj", "{D8E9BC90-FF02-4A41-88D4-1108F036F166}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator1API", "CombatCreator1API\CombatCreator1API.pyproj", "{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_1api", "CombatCreator1API\combat_creator_1api.pyproj", "{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator3CON", "CombatCreator3CON\CombatCreator3CON.pyproj", "{2C0E5E0D-290E-4302-A3A2-4E36B4DD739F}"
 EndProject
