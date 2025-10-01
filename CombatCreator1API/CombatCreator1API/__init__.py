@@ -1,8 +1,8 @@
 """
-The flask application package.
+Initialize the Flask application package.
 """
 
 from flask import Flask
-app = Flask(__name__)
+import combat_creator_1api.views
 
-import CombatCreator1API.views
+app = Flask(__name__)
