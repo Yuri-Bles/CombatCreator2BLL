@@ -16,7 +16,7 @@
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
-    <Name>CombatCreator1API</Name>
+    <Name>combat_creator_1api</Name>
     <RootNamespace>CombatCreator1API</RootNamespace>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
@@ -30,48 +30,48 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
-    <Compile Include="CombatCreator1API\__init__.py" />
-    <Compile Include="CombatCreator1API\views.py" />
+    <Compile Include="combat_creator_1api\__init__.py" />
+    <Compile Include="combat_creator_1api\views.py" />
     <Compile Include="__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CombatCreator1API\" />
-    <Folder Include="CombatCreator1API\static\" />
-    <Folder Include="CombatCreator1API\static\content\" />
-    <Folder Include="CombatCreator1API\static\fonts\" />
-    <Folder Include="CombatCreator1API\static\scripts\" />
-    <Folder Include="CombatCreator1API\templates\" />
+    <Folder Include="combat_creator_1api\" />
+    <Folder Include="combat_creator_1api\static\" />
+    <Folder Include="combat_creator_1api\static\content\" />
+    <Folder Include="combat_creator_1api\static\fonts\" />
+    <Folder Include="combat_creator_1api\static\scripts\" />
+    <Folder Include="combat_creator_1api\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="CombatCreator1API\static\content\bootstrap.css" />
-    <Content Include="CombatCreator1API\static\content\bootstrap.min.css" />
-    <Content Include="CombatCreator1API\static\content\site.css" />
-    <Content Include="CombatCreator1API\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="CombatCreator1API\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="CombatCreator1API\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="CombatCreator1API\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="CombatCreator1API\static\scripts\bootstrap.js" />
-    <Content Include="CombatCreator1API\static\scripts\bootstrap.min.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery-1.10.2.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="CombatCreator1API\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery.validate.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery.validate.min.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="CombatCreator1API\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="CombatCreator1API\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="CombatCreator1API\static\scripts\respond.js" />
-    <Content Include="CombatCreator1API\static\scripts\respond.min.js" />
-    <Content Include="CombatCreator1API\static\scripts\_references.js" />
-    <Content Include="CombatCreator1API\templates\about.html" />
-    <Content Include="CombatCreator1API\templates\contact.html" />
-    <Content Include="CombatCreator1API\templates\index.html" />
-    <Content Include="CombatCreator1API\templates\layout.html" />
+    <Content Include="combat_creator_1api\static\content\bootstrap.css" />
+    <Content Include="combat_creator_1api\static\content\bootstrap.min.css" />
+    <Content Include="combat_creator_1api\static\content\site.css" />
+    <Content Include="combat_creator_1api\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="combat_creator_1api\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="combat_creator_1api\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="combat_creator_1api\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="combat_creator_1api\static\scripts\bootstrap.js" />
+    <Content Include="combat_creator_1api\static\scripts\bootstrap.min.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery-1.10.2.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="combat_creator_1api\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery.validate.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery.validate.min.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="combat_creator_1api\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="combat_creator_1api\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="combat_creator_1api\static\scripts\respond.js" />
+    <Content Include="combat_creator_1api\static\scripts\respond.min.js" />
+    <Content Include="combat_creator_1api\static\scripts\_references.js" />
+    <Content Include="combat_creator_1api\templates\about.html" />
+    <Content Include="combat_creator_1api\templates\contact.html" />
+    <Content Include="combat_creator_1api\templates\index.html" />
+    <Content Include="combat_creator_1api\templates\layout.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
