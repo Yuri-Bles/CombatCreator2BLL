@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator2BLL", "CombatCreator2BLL.pyproj", "{D8E9BC90-FF02-4A41-88D4-1108F036F166}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_1api", "CombatCreator1API\combat_creator_1api.pyproj", "{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator3CON", "CombatCreator3CON\CombatCreator3CON.pyproj", "{2C0E5E0D-290E-4302-A3A2-4E36B4DD739F}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CombatCreator5TDAL", "CombatCreator5TDAL\CombatCreator5TDAL.pyproj", "{55196071-16F0-4E34-A247-B16EFBF85363}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_2bll", "combat_creator_2bll\combat_creator_2bll.pyproj", "{E3CDE041-A34E-4150-A873-2778D291D971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,16 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8E9BC90-FF02-4A41-88D4-1108F036F166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8E9BC90-FF02-4A41-88D4-1108F036F166}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF3E00B1-338D-4A1F-9FDF-56D8F467FAEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C0E5E0D-290E-4302-A3A2-4E36B4DD739F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C0E5E0D-290E-4302-A3A2-4E36B4DD739F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55196071-16F0-4E34-A247-B16EFBF85363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55196071-16F0-4E34-A247-B16EFBF85363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CDE041-A34E-4150-A873-2778D291D971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CDE041-A34E-4150-A873-2778D291D971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
