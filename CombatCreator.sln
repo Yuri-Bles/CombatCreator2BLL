@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_2bll", "combat_creator_2bll\combat_creator_2bll.pyproj", "{E3CDE041-A34E-4150-A873-2778D291D971}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_3con", "combat_creator_3con\combat_creator_3con.pyproj", "{1C2BA1F2-7C2B-40BD-A907-D22D502428F0}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_7tdal", "combat_creator_7tdal\combat_creator_7tdal.pyproj", "{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E3CDE041-A34E-4150-A873-2778D291D971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3CDE041-A34E-4150-A873-2778D291D971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C2BA1F2-7C2B-40BD-A907-D22D502428F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C2BA1F2-7C2B-40BD-A907-D22D502428F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
