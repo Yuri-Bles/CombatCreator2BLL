@@ -25,6 +25,18 @@
     <Compile Include="combat_system_draft.py" />
     <Compile Include="__init__.py" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\combat_creator_3con\combat_creator_3con.pyproj">
+      <Name>combat_creator_3con</Name>
+      <Project>{1c2ba1f2-7c2b-40bd-a907-d22d502428f0}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\combat_creator_7tdal\combat_creator_7tdal.pyproj">
+      <Name>combat_creator_7tdal</Name>
+      <Project>{3329c3b4-c72a-4a96-bc7e-b4d6a8c898ce}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in

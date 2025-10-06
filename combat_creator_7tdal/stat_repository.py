@@ -2,7 +2,22 @@
 Module Dockstring.
 """
 
-from combat_creator_3con import stat_interface
+from stat_interface import StatInterface
 
-class StatRepository(stat_interface.StatInterface):
-    pass
+class StatRepository(StatInterface):
+    """
+    Class Docstring.
+    """
+    stats = []
+
+    def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):
+        """
+        Method Docstring.
+        """
+        self.stats.append([name, default_value, min_value, max_value])
+
+    def get_all_stats(self):
+        """
+        Method Docstring.
+        """
+        return self.stats

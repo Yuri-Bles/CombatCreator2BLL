@@ -2,31 +2,37 @@
 Module docstring.
 """
 
+import stat
+import stat_repository
+from stat_interface import StatInterface
+
 class CombatSystemDraft:
     """Class docstring."""
 
-    def __init__(self, name: str, stats=None):
+    def __init__(self, stat_repository: StatInterface, name: str, stats=None):
         """
         Method docstring.
         """
+        self.stat_repository = stat_repository
         self.name = name
         self.stats = stats if stats is not None else []
+        for stat in stats:
+            self.add_stat(stat[0], stat[1], stat[2], stat[3])
         # The values of a stat are in order: Name, Default Value, Minimum Value, Maximum Value
 
-    def add_stat(self, name: str, default_value: int, minimum_value: int, maximum_value: int):
+    def add_stat(self, name: str, default_value: float, minimum_value: float, maximum_value: float):
         """
         Add a stat to the combat system.
 
         Args:
             name (str): Name of the stat.
-            default_value (int): Default value of the stat.
-            minimum_value (int): Minimum allowable value.
-            maximum_value (int): Maximum allowable value.
+            default_value (float): Default value of the stat.
+            minimum_value (float): Minimum value allowed.
+            maximum_value (float): Maximum value allowed.
         """
-        self.stats.append([name, default_value, minimum_value, maximum_value])
+        self.stat_repository.add_stat(name, default_value, minimum_value, maximum_value)
+        self.stats = self.get_all_stats
 
-    def remove_stat(self, name: str):
-        """Remove a stat by name."""
-        for stat in self.stats:
-            if stat[0] == name:
-                self.stats.remove(stat)
+    def get_all_stats(self):
+        """Get a stat by name."""
+        return self.stat_repository.get_all_stats()

@@ -15,7 +15,7 @@ class StatInterface(ABC):
         """
 
     @abstractmethod
-    def remove_stat_by_name(self, name: str):
+    def get_all_stats(self):
         """
         Method Docstring.
         """
