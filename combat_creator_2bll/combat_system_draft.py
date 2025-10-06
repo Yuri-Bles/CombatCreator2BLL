@@ -2,22 +2,20 @@
 Module docstring.
 """
 
-import stat
-import stat_repository
 from stat_interface import StatInterface
 
 class CombatSystemDraft:
     """Class docstring."""
 
-    def __init__(self, stat_repository: StatInterface, name: str, stats=None):
+    def __init__(self, _stat_repository: StatInterface, name: str, stats=None):
         """
         Method docstring.
         """
-        self.stat_repository = stat_repository
+        self.stat_repository = _stat_repository
         self.name = name
         self.stats = stats if stats is not None else []
-        for stat in stats:
-            self.add_stat(stat[0], stat[1], stat[2], stat[3])
+        for _stat in stats:
+            self.add_stat(_stat[0], _stat[1], _stat[2], _stat[3])
         # The values of a stat are in order: Name, Default Value, Minimum Value, Maximum Value
 
     def add_stat(self, name: str, default_value: float, minimum_value: float, maximum_value: float):

@@ -2,6 +2,6 @@
 Docstring.
 """
 
-from stat_repository import StatRepository 
+from stat_repository import StatRepository
 
 repo = StatRepository()
