@@ -18,7 +18,7 @@ class CombatSystemDraft:
             self.add_stat(_stat[0], _stat[1], _stat[2], _stat[3])
         # The values of a stat are in order: Name, Default Value, Minimum Value, Maximum Value
 
-    def add_stat(self, name: str, default_value: float, minimum_value: float, maximum_value: float):
+    def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):
         """
         Add a stat to the combat system.
 
@@ -28,7 +28,7 @@ class CombatSystemDraft:
             minimum_value (float): Minimum value allowed.
             maximum_value (float): Maximum value allowed.
         """
-        self.stat_repository.add_stat(name, default_value, minimum_value, maximum_value)
+        self.stat_repository.add_stat(name, default_value, min_value, max_value)
         self.stats = self.get_all_stats
 
     def get_all_stats(self):

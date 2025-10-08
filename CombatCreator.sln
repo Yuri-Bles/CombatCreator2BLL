@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_3con", "comb
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_7tdal", "combat_creator_7tdal\combat_creator_7tdal.pyproj", "{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "combat_creator_1api", "combat_creator_1api\combat_creator_1api.pyproj", "{93FA1BC6-E28B-4514-BD26-EF1F36AC8F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{1C2BA1F2-7C2B-40BD-A907-D22D502428F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3329C3B4-C72A-4A96-BC7E-B4D6A8C898CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FA1BC6-E28B-4514-BD26-EF1F36AC8F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FA1BC6-E28B-4514-BD26-EF1F36AC8F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

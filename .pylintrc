@@ -429,7 +429,9 @@ confidence=HIGH,
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
-# E0401 triggers false positives in this project
+
+# E0401 triggers false positives in this project.
+# W0718. allowing all exception catching error handlers reduces the chance of crashing.
 disable=raw-checker-failed,
         bad-inline-option,
         locally-disabled,
@@ -440,7 +442,8 @@ disable=raw-checker-failed,
         use-symbolic-message-instead,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
-        E0401
+        E0401,
+        W0718
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
