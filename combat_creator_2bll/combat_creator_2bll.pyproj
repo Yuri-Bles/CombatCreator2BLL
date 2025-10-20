@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>combat_creator_2bll</Name>
     <RootNamespace>combat_creator_2bll</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

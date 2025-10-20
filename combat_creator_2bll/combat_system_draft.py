@@ -2,7 +2,7 @@
 Module docstring.
 """
 
-from stat_interface import StatInterface
+from combat_creator_3con.stat_interface import StatInterface
 
 class CombatSystemDraft:
     """Class docstring."""

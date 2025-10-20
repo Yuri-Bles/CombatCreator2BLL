@@ -2,6 +2,15 @@
 Module Dockstring.
 """
 
+print("Hello")
+
+import sys
+import os
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 from flask import Flask, jsonify, request
 
 from combat_creator_2bll import combat_system_draft

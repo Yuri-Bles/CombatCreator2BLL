@@ -3,7 +3,7 @@ Docstring.
 """
 
 from combat_system_draft import CombatSystemDraft
-from stat_repository import StatRepository
+from combat_creator_3con.stat_repository import StatRepository
 
 
 stat_repository = StatRepository()
