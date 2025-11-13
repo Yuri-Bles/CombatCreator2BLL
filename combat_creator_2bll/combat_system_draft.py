@@ -32,5 +32,5 @@ class CombatSystemDraft:
         self.stats = self.get_all_stats
 
     def get_all_stats(self):
-        """Get a stat by name."""
+        """Get all stats."""
         return self.stat_repository.get_all_stats()

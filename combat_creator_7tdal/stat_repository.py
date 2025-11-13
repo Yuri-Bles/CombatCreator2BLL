@@ -15,7 +15,10 @@ class StatRepository(StatInterface):
     """
     Class Docstring.
     """
-    stats = []
+    stats = [
+        ["HP", 34, 0, 42],
+        ["Mana", 25, 0, 50]
+    ]
 
     def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):
         """
