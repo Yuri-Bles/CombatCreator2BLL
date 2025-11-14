@@ -3,6 +3,7 @@ Module docstring.
 """
 
 from combat_creator_3con.stat_interface import StatInterface
+from sqlalchemy.orm import Session
 
 class CombatSystemDraft:
     """Class docstring."""
@@ -30,8 +31,12 @@ class CombatSystemDraft:
             maximum_value (float): Maximum value allowed.
         """
         self.stat_repository.add_stat(name, default_value, min_value, max_value)
-        self.stats = self.get_all_stats
 
-    def get_all_stats(self):
+    def get_stats_by_system_id(self, session: Session):
         """Get all stats."""
-        return self.stat_repository.get_all_stats()
+        _stats = self.stat_repository.get_stats_by_system_id(session)
+        result = [
+            [stat.name, float(stat.default_value), float(stat.min_value), float(stat.max_value)]
+            for stat in _stats
+        ]
+        return result

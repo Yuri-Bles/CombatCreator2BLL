@@ -3,6 +3,7 @@ Module Docstring.
 """
 
 from abc import ABC, abstractmethod
+from sqlalchemy.orm import Session
 
 class StatInterface(ABC):
     """
@@ -15,7 +16,7 @@ class StatInterface(ABC):
         """
 
     @abstractmethod
-    def get_all_stats(self):
+    def get_stats_by_system_id(self, session: Session):
         """
         Method Docstring.
         """

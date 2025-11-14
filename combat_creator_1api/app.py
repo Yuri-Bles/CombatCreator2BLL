@@ -13,7 +13,8 @@ if project_root not in sys.path:
 from flask import Flask, jsonify, request
 
 from combat_creator_2bll import combat_system_draft
-from combat_creator_7tdal.stat_repository import StatRepository
+from combat_creator_4dal.database import get_session
+from combat_creator_4dal.stat_repository import StatRepository
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True, allow_headers=["Content-Type", "api-key"])
@@ -77,7 +78,8 @@ def get_all_stats():
     Method Dockstring.
     """
     try:
-        _stats = combat_system.get_all_stats()
+        with get_session() as session:
+            _stats = combat_system.get_stats_by_system_id(session)
         return jsonify({
             "message": "Stats successfully retrieved",
             "stats": _stats
