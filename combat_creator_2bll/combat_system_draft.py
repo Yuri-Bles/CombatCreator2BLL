@@ -13,9 +13,10 @@ class CombatSystemDraft:
         """
         self.stat_repository = _stat_repository
         self.name = name
-        self.stats = stats if stats is not None else []
-        for _stat in stats:
-            self.add_stat(_stat[0], _stat[1], _stat[2], _stat[3])
+        self.stats = []
+        if stats is not None:
+            for _stat in stats:
+                self.add_stat(_stat[0], _stat[1], _stat[2], _stat[3])
         # The values of a stat are in order: Name, Default Value, Minimum Value, Maximum Value
 
     def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):

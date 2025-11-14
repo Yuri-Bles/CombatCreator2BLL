@@ -31,3 +31,5 @@ class StatRepository(StatInterface):
         Method Docstring.
         """
         return self.stats
+
+stat_repository = StatRepository()
