@@ -4,6 +4,7 @@ Module Dockstring.
 
 print("Hello")
 
+from flask_cors import CORS
 import sys
 import os
 
@@ -17,19 +18,30 @@ from combat_creator_2bll import combat_system_draft
 from combat_creator_7tdal import stat_repository
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True, allow_headers=["Content-Type", "api-key"])
 
 users = []
 
-API_KEY = "mysecretapikey123"
+API_KEY = "w6+7OT8yc>I=aR%)h{sG(dTU"
+
+@app.route('/combat_system_draft', methods=['OPTIONS'])
+def options():
+    return jsonify({}), 200
 
 @app.before_request
 def require_api_key():
     """
     Method Dockstring.
     """
-    key = request.headers.get('api-key')
+    if request.method == 'OPTIONS':
+        return None
+
+    key = request.headers.get("api-key")
+    print(f"API key received: '{key}'")
+    print(f"Expected key: '{API_KEY}'")
     if key != API_KEY:
         return jsonify({"error": "Unauthorized"}), 401
+    print("Succeeded API key check")
     return None
 
 @app.route('/combat_system_draft', methods=['POST'])
@@ -66,9 +78,14 @@ def get_all_stats():
     """
     Method Dockstring.
     """
+    print("Hit stat method")
     try:
         _stats = combat_system_draft.CombatSystemDraft().get_all_stats()
-        return jsonify(_stats), 200
+        print("Hit return")
+        return jsonify({
+            "message": "Stats successfully retrieved",
+            "stats": _stats
+        }), 200
     except Exception as e:
         return jsonify({"error": "Failed to get stats", "details": str(e)}), 500
 
