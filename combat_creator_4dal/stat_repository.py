@@ -19,10 +19,20 @@ class StatRepository(StatInterface):
     Class Docstring.
     """
 
-    def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):
+    def create_system_stat(self, system_id: int, session: Session, new_stat: List[Any]):
         """
         Method Docstring.
         """
+        new_stat = DraftStat(
+            SystemID=system_id,
+            name=new_stat['Name'],
+            default_value=new_stat['DefaultValue'],
+            min_value=new_stat['MinValue'],
+            max_value=new_stat['MaxValue']
+        )
+
+        session.add(new_stat)
+        session.commit()
 
     def get_stats_by_system_id(self, system_id: int, session: Session):
         """
@@ -35,21 +45,24 @@ class StatRepository(StatInterface):
         """
         Method Docstring.
         """
-        print(type(new_stat)) 
-        print(new_stat.keys())
-        print(new_stat['Id'])
-
         db_stat = session.query(DraftStat).filter_by(
             ID=new_stat['Id']
         ).first()
-
-        print("Here")
 
         db_stat.name = new_stat['Name']
         db_stat.default_value = new_stat['DefaultValue']
         db_stat.min_value = new_stat['MinValue']
         db_stat.max_value = new_stat['MaxValue']
 
+        session.commit()
+
+    def delete_system_stat(self, stat_id: int, session: Session):
+        stat = session.query(DraftStat).filter_by(ID=stat_id).first()
+
+        if stat is None:
+            return False
+
+        session.delete(stat)
         session.commit()
 
 stat_repository = StatRepository()

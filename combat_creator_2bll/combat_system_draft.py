@@ -33,6 +33,15 @@ class CombatSystemDraft:
         """
         self.stat_repository.add_stat(name, default_value, min_value, max_value)
 
+    def create_system_stat(self, system_id: int, session: Session):
+        """Creates a new stat"""
+        stat = {}
+        stat['Name'] = "New Stat"
+        stat['DefaultValue'] = 75
+        stat['MinValue'] = 0
+        stat['MaxValue'] = 100
+        self.stat_repository.create_system_stat(system_id, session, stat)
+
     def get_stats_by_system_id(self, system_id: int, session: Session):
         """Get all stats."""
         _stats = self.stat_repository.get_stats_by_system_id(system_id, session)
@@ -55,4 +64,7 @@ class CombatSystemDraft:
                 return jsonify({"error": "The minimum value must be lower than the default value, and the default value must be lower than the maximum value"}), 400
         for stat in stats:
             self.stat_repository.update_system_stats_by_system_stat_id(system_id, session, stat)
+
+    def delete_system_stat(self, stat_id: int, session: Session):
+        self.stat_repository.delete_system_stat(stat_id, session)
 

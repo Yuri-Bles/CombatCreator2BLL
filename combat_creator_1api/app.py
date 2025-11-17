@@ -44,34 +44,25 @@ def require_api_key():
         return jsonify({"error": "Unauthorized"}), 401
     return None
 
-@app.route('/combat_system_draft', methods=['POST'])
-def add_stat():
-    """
-    Method Dockstring.
-    """
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Missing JSON body"}), 400
-
-    required = ["name", "default_value", "min_value", "max_value"]
-    if not all(key in data for key in required):
-        return jsonify({"error": f"Missing one of: {', '.join(required)}"}), 400
-
+@app.route('/create_system_stat', methods=['POST'])
+def create_system_stat():
     try:
-        combat_system_draft.CombatSystemDraft(
-            stat_repository, "Test System"
-        ).add_stat(
-            data["name"],
-            float(data["default_value"]),
-            float(data["min_value"]),
-            float(data["max_value"]),
-        )
-        return jsonify({"message": "Stat created successfully"}), 201
+        data = request.get_json()
 
-    except ValueError as e:
-        return jsonify({"error": str(e)}), 400
+        system_id = data.get("system_id")
+
+        if system_id is None:
+            return jsonify({"error": "system_id is required"}), 400
+
+        with get_session() as session:
+            result = combat_system.create_system_stat(system_id, session)
+
+        return jsonify({"message": "Stat created", "result": result}), 200
+    
     except Exception as e:
-        return jsonify({"error": "Internal server error", "details": str(e)}), 500
+        print("SERVER ERROR:", e)
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/combat_system_draft', methods=['GET'])
 def get_all_stats():
@@ -108,6 +99,26 @@ def update_system_stats_by_system_id():
             result = combat_system.update_system_stats_by_system_id(system_id, session, stats)
 
         return jsonify({"message": "Stats updated", "result": result}), 200
+    
+    except Exception as e:
+        print("SERVER ERROR:", e)
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/delete_system_stat', methods=['POST'])
+def delete_system_stat():
+    try:
+        data = request.get_json()
+
+        stat_id = data.get("stat_id")
+
+        if stat_id is None:
+            return jsonify({"error": "stat_id is required"}), 400
+
+        with get_session() as session:
+            combat_system.delete_system_stat(stat_id, session)
+
+        return jsonify({"message": "Stat deleted"}), 200
     
     except Exception as e:
         print("SERVER ERROR:", e)

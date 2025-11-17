@@ -21,7 +21,7 @@ class StatRepository(StatInterface):
         ["Mana", 25, 0, 50]
     ]
 
-    def add_stat(self, name: str, default_value: float, min_value: float, max_value: float):
+    def create_system_stat(self, system_id: int, session: Session, new_stat: List[Any]):
         """
         Method Docstring.
         """
@@ -34,6 +34,11 @@ class StatRepository(StatInterface):
         return self.stats
 
     def update_system_stats_by_system_stat_id(self, system_id: int, session: Session), new_stat: List[Any]:
+        """
+        Method Docstring.
+        """
+
+    def delete_system_stat(self, stat_id: int, session: Session):
         """
         Method Docstring.
         """
