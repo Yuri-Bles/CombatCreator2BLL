@@ -27,10 +27,15 @@ class StatRepository(StatInterface):
         """
         self.stats.append([name, default_value, min_value, max_value])
 
-    def get_stats_by_system_id(self, session: Session):
+    def get_stats_by_system_id(self, system_id: int, session: Session):
         """
         Method Docstring.
         """
         return self.stats
+
+    def update_system_stats_by_system_stat_id(self, system_id: int, session: Session), new_stat: List[Any]:
+        """
+        Method Docstring.
+        """
 
 stat_repository = StatRepository()

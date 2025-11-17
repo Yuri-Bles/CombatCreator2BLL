@@ -5,6 +5,7 @@ Module Dockstring.
 from flask_cors import CORS
 import sys
 import os
+import traceback
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if project_root not in sys.path:
@@ -79,7 +80,8 @@ def get_all_stats():
     """
     try:
         with get_session() as session:
-            _stats = combat_system.get_stats_by_system_id(session)
+            system_id = request.args.get("system_id", type=int)
+            _stats = combat_system.get_stats_by_system_id(system_id, session)
         return jsonify({
             "message": "Stats successfully retrieved",
             "stats": _stats
@@ -87,6 +89,30 @@ def get_all_stats():
     except Exception as e:
         print(e)
         return jsonify({"error": "Failed to get stats", "details": str(e)}), 500
+
+@app.route('/update_system_stats_by_system_id', methods=['POST'])
+def update_system_stats_by_system_id():
+    try:
+        data = request.get_json()
+
+        system_id = data.get("system_id")
+        stats = data.get("stats")
+
+        if system_id is None:
+            return jsonify({"error": "system_id is required"}), 400
+        
+        if stats is None:
+            return jsonify({"error": "stats are required"}), 400
+
+        with get_session() as session:
+            result = combat_system.update_system_stats_by_system_id(system_id, session, stats)
+
+        return jsonify({"message": "Stats updated", "result": result}), 200
+    
+    except Exception as e:
+        print("SERVER ERROR:", e)
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

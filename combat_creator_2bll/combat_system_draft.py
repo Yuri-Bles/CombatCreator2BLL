@@ -2,6 +2,7 @@
 Module docstring.
 """
 
+from typing import List, Any
 from combat_creator_3con.stat_interface import StatInterface
 from sqlalchemy.orm import Session
 
@@ -32,11 +33,26 @@ class CombatSystemDraft:
         """
         self.stat_repository.add_stat(name, default_value, min_value, max_value)
 
-    def get_stats_by_system_id(self, session: Session):
+    def get_stats_by_system_id(self, system_id: int, session: Session):
         """Get all stats."""
-        _stats = self.stat_repository.get_stats_by_system_id(session)
-        result = [
-            [stat.name, float(stat.default_value), float(stat.min_value), float(stat.max_value)]
-            for stat in _stats
-        ]
+        _stats = self.stat_repository.get_stats_by_system_id(system_id, session)
+        result = []
+        for stat in _stats:
+            result.append([
+                stat.ID,
+                stat.name,
+                float(stat.default_value),
+                float(stat.min_value),
+                float(stat.max_value)
+            ])
+
         return result
+
+    def update_system_stats_by_system_id(self, system_id: int, session: Session, stats: List[Any]):
+        """Updates the stats on the page shown"""
+        for stat in stats:
+            if not (stat['MinValue'] < stat['DefaultValue'] < stat['MaxValue']):
+                return jsonify({"error": "The minimum value must be lower than the default value, and the default value must be lower than the maximum value"}), 400
+        for stat in stats:
+            self.stat_repository.update_system_stats_by_system_stat_id(system_id, session, stat)
+
