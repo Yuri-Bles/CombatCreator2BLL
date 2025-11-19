@@ -1,0 +1,1 @@
+DATABASE_URL = "mssql+pyodbc://sa:Helder123!@localhost:1433/CombatCreator?driver=ODBC+Driver+17+for+SQL+Server"

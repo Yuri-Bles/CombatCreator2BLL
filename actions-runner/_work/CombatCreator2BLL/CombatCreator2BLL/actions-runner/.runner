@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 22,
+  "agentName": "LAPTOP_YURI",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/Xnkko0WDy22XxkrMlCvPTOUGSmqV5kNbNMkdld9bCdkFfcQMfi/",
+  "gitHubUrl": "https://github.com/Yuri-Bles/CombatCreator2BLL",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
